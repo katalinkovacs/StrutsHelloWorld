@@ -10,8 +10,8 @@ public class MessageStore {
 
     public MessageStore() {
 
-        message = "Hello Kati! You are a Struts User";
-        message2 = "Hello Kati! This is the second msg";
+        message = "Hello! You are a Struts User";
+        message2 = "Hello! This is the second msg";
 
     }
 
