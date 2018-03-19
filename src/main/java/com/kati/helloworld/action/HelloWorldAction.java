@@ -3,26 +3,13 @@ package com.kati.helloworld.action;
 import com.kati.helloworld.model.MessageStore;
 import com.opensymphony.xwork2.ActionSupport;
 
-
+// The model class that stores the message to display in the view.
 public class HelloWorldAction extends ActionSupport {
 
-    //private static final long serialVersionUID = 1L;
-
-    /**
-     * The model class that stores the message
-     * to display in the view.
-     */
+    //Creates the MessageStore model object and returns success.
+    // The MessageStore model  object will be available to the view.
     private MessageStore messageStore;
     private String name;
-
-
-    /*
-     * Creates the MessageStore model object and
-     * returns success.  The MessageStore model
-     * object will be available to the view.
-     * (non-Javadoc)
-     * @see com.opensymphony.xwork2.ActionSupport#execute()
-     */
 
   /*  public String execute() {
 
@@ -32,7 +19,7 @@ public class HelloWorldAction extends ActionSupport {
     }
 */
 
-    public String execute() throws Exception {
+ /*   public String execute() throws Exception {
 
         messageStore = new MessageStore() ;
 
@@ -42,8 +29,14 @@ public class HelloWorldAction extends ActionSupport {
             return ERROR;
         }
     }
+ */
 
-     /* public String execute() throws Exception {
+    public String execute() {
+        if ("Kati".equals(name)) return SecondAction.GOOD;
+        return SecondAction.BAD;
+    }
+
+ /* public String execute() throws Exception {
         return "success";
     }
 */
