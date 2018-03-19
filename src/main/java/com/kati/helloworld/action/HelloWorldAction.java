@@ -23,11 +23,24 @@ public class HelloWorldAction extends ActionSupport {
      * (non-Javadoc)
      * @see com.opensymphony.xwork2.ActionSupport#execute()
      */
-    public String execute() {
+
+  /*  public String execute() {
 
         messageStore = new MessageStore() ;
 
         return SUCCESS;
+    }
+*/
+
+    public String execute() throws Exception {
+
+        messageStore = new MessageStore() ;
+
+        if ("Kati".equals(name)) {
+            return SUCCESS;
+        } else {
+            return ERROR;
+        }
     }
 
      /* public String execute() throws Exception {

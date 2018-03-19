@@ -5,7 +5,7 @@
 
 <struts>
 
-	<constant name="struts.devMode" value="true" />
+	<constant name="struts.devMode" value="true" />  <!-- allows us to see more debug messages in the log file. -->
 
 	<package name="basicstruts2" extends="struts-default">
 
@@ -20,9 +20,15 @@
 		If the result returned by the execute method is success render the HelloWorld.jsp -->
 		<action name="hello" class="com.kati.helloworld.action.HelloWorldAction" method="execute">
 			<result name="success">/HelloWorld.jsp</result>
+			<!-- Results have optional name and type attributes. The default name value is "success". -->
+			<result name = "error">/AccessDenied.jsp</result>
 		</action>
 
+		<!-- more actions can be listed here -->
+
 	</package>
+
+	<!-- more packages can be listed here -->
 
 
 
